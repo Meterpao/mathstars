@@ -4,11 +4,11 @@ const server = require('./../server.js');
 
 // Example for handle a get request at '/' endpoint.
 
-function getHome(request, response){
+function getPage(request, response){
   // do any work you need to do, then
   response.render('home', {title: 'Math Stars'});
 }
 
 module.exports = {
-    getHome
+  getPage
 };
