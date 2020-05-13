@@ -1,7 +1,7 @@
 {
-  "name": "assignment4",
+  "name": "mathstars",
   "version": "1.0.0",
-  "description": "Stencil code for BrownCS1320 Assignment4",
+  "description": "Math Stars",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
