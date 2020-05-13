@@ -13,7 +13,7 @@ function randomAdditionQuestion() {
 function randomSubtractionQuestion() {
   var firstNumber = Math.floor(Math.random() * 10) + 1;
   var secondNumber = Math.floor(Math.random() * 10) + 1;
-  return firstNumber, "-", secondNumber, firstNumber - secondNumber;
+  return [firstNumber, "-", secondNumber, firstNumber - secondNumber];
 }
 
 // returns first int, second int and the multiplication of the two
