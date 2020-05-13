@@ -7,7 +7,7 @@ const utils = require('./util/roomIdGenerator.js');
 
 // import handlers
 const homeHandler = require('./controllers/home.js');
-const roomHandler = require('./controllers/room.js');
+const game1Handler = require('./controllers/game1.js');
 
 const app = express();
 const port = 8080;
@@ -24,7 +24,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // Create controller handlers to handle requests at each endpoint
-app.get('/', homeHandler.getHome);
+app.get('/', homeHandler.getPage);
+app.get('/game1', game1Handler.getPage);
 
 // NOTE: This is the sample server.js code we provided, feel free to change the structures
 
