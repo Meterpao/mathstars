@@ -1,0 +1,14 @@
+<h1 class="center"> Room: {{ roomName }} </h1>
+<div class="center">
+    <ul class="list-group" id="messages"></ul>
+</div>
+<div class="center">
+    <form method="POST" action="/{{roomName}}/messages" id="messageForm">
+        <input type="text" name="message">
+        <input type="hidden" name="nickname" id="nicknameField" value="">
+        <input type="hidden" name="roomName" id="roomName" value={{ roomName }}>
+        <input type="submit" class="btn btn-primary" value="Post Message">
+    </form>
+</div>
+
+<script src="/js/room.js"></script>
