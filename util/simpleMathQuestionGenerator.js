@@ -40,7 +40,12 @@ function randomSimpleQuestion(
   includeMultiplication = 1,
   includeDivision = 1
 ) {
-  var randomQuestionInt = Math.random() * arguments.reduce((a, b) => a + b, 0);
+  var total =
+    includeAddition +
+    includeSubtraction +
+    includeMultiplication +
+    includeDivision;
+  var randomQuestionInt = Math.random() * total;
   var runningSum = includeAddition;
   if (randomQuestionInt <= runningSum) {
     return randomAdditionQuestion();
@@ -59,7 +64,7 @@ function randomSimpleQuestion(
   }
 }
 
-module.exports.simpleMathQuestionGenerator = function getQuestions(
+module.exports.getQuestions = function getQuestions(
   includeAddition = 1,
   includeSubtraction = 1,
   includeMultiplication = 1,
@@ -67,7 +72,14 @@ module.exports.simpleMathQuestionGenerator = function getQuestions(
 ) {
   var toReturn = [];
   for (i = 0; i < 100; i++) {
-    toReturn.push(randomSimpleQuestion(arguments));
+    toReturn.push(
+      randomSimpleQuestion(
+        includeAddition,
+        includeSubtraction,
+        includeMultiplication,
+        includeDivision
+      )
+    );
   }
   return toReturn;
 };
